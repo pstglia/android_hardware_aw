@@ -52,6 +52,8 @@ cc_library_static {
         "-DHWC2_USE_CPP11",
         "-DHWC2_INCLUDE_STRINGIFICATION",
         "-DHWC2_INCLUDE_STRINGIFICATION",
+        "-D_board_apollo_",
+        "-DLOCAL_TARGET_BOARD_PLATFORM=apollo",
     ],
     ldflags: ["-shared"],
 

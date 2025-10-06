@@ -19,7 +19,7 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE               := hwcomposer.$(TARGET_BOARD_PLATFORM)
+LOCAL_MODULE               := hwcomposer.apollo
 LOCAL_PROPRIETARY_MODULE   := true
 LOCAL_MODULE_RELATIVE_PATH := hw
 
@@ -30,7 +30,7 @@ LOCAL_C_INCLUDES += \
 		hardware/aw/display/interfaces/config/1.0/src
 
 LOCAL_CFLAGS += -Wno-unused-parameter \
-		-D_board_$(TARGET_BOARD_PLATFORM)_ \
+		-D_board_apollo_ \
 		-DLOG_TAG=\"sunxihwc\" \
 		-DHWC2_USE_CPP11 -DHWC2_INCLUDE_STRINGIFICATION
 
@@ -53,15 +53,14 @@ else
 			   vendorservice/default/VendorServiceAdapter.cpp
 endif
 
-ifneq ($(WRITE_BACK_MODE), )
-	LOCAL_CFLAGS += -DWRITE_BACK_MODE=$(WRITE_BACK_MODE)
-	LOCAL_C_INCLUDES += hardware/aw/display/hwc-hal/writeback/disp2/include \
-						hardware/aw/display/hwc-hal/writeback/render/include
+LOCAL_CFLAGS += -DWRITE_BACK_MODE=0
+LOCAL_C_INCLUDES += hardware/aw/display/hwc-hal/writeback/disp2/include \
+		    hardware/aw/display/hwc-hal/writeback/render/include
 
 ifneq ($(GPU_PUBLIC_INCLUDE),)
 	LOCAL_C_INCLUDES += hardware/aw/gpu \
 			    hardware/aw/gpu/include
-	LOCAL_CFLAGS += -DGPU_PUBLIC_INCLUDE=\"$(GPU_PUBLIC_INCLUDE)\"
+	LOCAL_CFLAGS += -DLOCAL_GPU_PUBLIC_INCLUDE=\"$(GPU_PUBLIC_INCLUDE)\"
 endif
 
 LOCAL_SRC_FILES += writeback/WriteBackBufferPool.cpp \
@@ -76,7 +75,6 @@ LOCAL_SRC_FILES += writeback/WriteBackBufferPool.cpp \
 				   writeback/render/KeystoneRender.cpp
 
 LOCAL_SHARED_LIBRARIES += libGLESv2 libGLESv3 libui libEGL
-endif
 
 LOCAL_STATIC_LIBRARIES += libawhdr10p
 
