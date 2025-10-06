@@ -42,7 +42,7 @@
 #include "HwC2Interface.h"
 #include "VdecComponent.h"
 
-#include GPU_PUBLIC_INCLUDE
+#include "mali-bifrost/gralloc/src/mali_gralloc_buffer.h"
 typedef ion_user_handle_t ion_handle_abstract_t;
 #define ION_NULL_VALUE (0)
 #define GPU_ALIGN_STRIDE (32)

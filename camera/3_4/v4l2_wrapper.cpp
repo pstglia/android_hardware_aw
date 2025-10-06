@@ -32,7 +32,7 @@
 #include "type_camera.h"
 #include "v4l2_wrapper.h"
 
-#include GPU_PUBLIC_INCLUDE
+#include "mali-bifrost/gralloc/src/mali_gralloc_buffer.h"
 #include "camera_config.h"
 
 

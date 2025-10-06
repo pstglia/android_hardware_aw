@@ -39,7 +39,7 @@
 #include "C2Log.h"
 #include "HwC2Interface.h"
 
-#include GPU_PUBLIC_INCLUDE
+#include "mali-bifrost/gralloc/src/mali_gralloc_buffer.h"
 
 extern "C" void ImgRGBA2YVU420SP_neon(unsigned char *pu8RgbBuffer,
                                       unsigned char **pu8SrcYUV,

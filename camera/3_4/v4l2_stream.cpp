@@ -50,7 +50,7 @@
 #include "v4l2_gralloc.h"
 #include "linux/videodev2.h"
 #include "type_camera.h"
-#include GPU_PUBLIC_INCLUDE
+#include "mali-bifrost/gralloc/src/mali_gralloc_buffer.h"
 
 
 extern "C" int AWJpecEnc(JpegEncInfo* pJpegInfo, EXIFInfo* pExifInfo, void* pOutBuffer, int* pOutBufferSize);

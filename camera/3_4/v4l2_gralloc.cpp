@@ -18,7 +18,7 @@
 
 #include "common.h"
 #include "stream_format.h"
-#include GPU_PUBLIC_INCLUDE
+#include "mali-bifrost/gralloc/src/mali_gralloc_buffer.h"
 
 
 namespace v4l2_camera_hal {

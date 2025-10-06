@@ -1,7 +1,7 @@
 #ifndef SUNXI_PRIVATE_HANDLE_H
 #define SUNXI_PRIVATE_HANDLE_H
 
-#include GPU_PUBLIC_INCLUDE
+#include "mali-bifrost/gralloc/src/mali_gralloc_buffer.h"
 
 namespace sunxi {
 

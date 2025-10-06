@@ -30,7 +30,7 @@
 #include <HwC2Interface.h>
 #include "C2HwSupport.h"
 #include "C2Log.h"
-#include GPU_PUBLIC_INCLUDE
+#include "mali-bifrost/gralloc/src/mali_gralloc_buffer.h"
 
 namespace android {
 

@@ -24,7 +24,7 @@
 #include <cutils/native_handle.h>
 #include <ui/GraphicBuffer.h>
 #include "engine.h"
-#include GPU_PUBLIC_INCLUDE
+#include "mali-bifrost/gralloc/src/mali_gralloc_buffer.h"
 
 class EGLImageBuffer {
     /* android::sp<android::GraphicBuffer> graphicBuffer; */

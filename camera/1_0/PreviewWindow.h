@@ -5,7 +5,7 @@
 #include <ui/Rect.h>
 #include "CameraPlatform.h"
 #include "V4L2CameraDevice2.h"
-#include GPU_PUBLIC_INCLUDE
+#include "mali-bifrost/gralloc/src/mali_gralloc_buffer.h"
 #include <linux/ion.h> //ION dependencies
 #include <ion/ion.h> //ION dependencies
 

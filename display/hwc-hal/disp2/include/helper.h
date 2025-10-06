@@ -26,9 +26,9 @@
 
 #if (defined(_board_petrel_)             \
     || defined(_board_apollo_)           \
-    || (TARGET_BOARD_PLATFORM == cupid)  \
-    || (TARGET_BOARD_PLATFORM == eros)   \
-    || (TARGET_BOARD_PLATFORM == mercury))
+    || (LOCAL_TARGET_BOARD_PLATFORM == cupid)  \
+    || (LOCAL_TARGET_BOARD_PLATFORM == eros)   \
+    || (LOCAL_TARGET_BOARD_PLATFORM == mercury))
 #define GRALLOC_SUNXI_METADATA_BUF
 #endif
 

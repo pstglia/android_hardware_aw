@@ -3,7 +3,7 @@
 
 #include <memory/memoryAdapter.h>
 #include <memory/sc_interface.h>
-#include GPU_PUBLIC_INCLUDE
+#include "mali-bifrost/gralloc/src/mali_gralloc_buffer.h"
 #include <HardwareAPI.h> //VideoNativeHandleMetadata strust dependencies
 
 #ifdef __A80__

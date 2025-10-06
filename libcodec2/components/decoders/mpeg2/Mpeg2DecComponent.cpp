@@ -31,7 +31,7 @@
 #include "C2Log.h"
 #include "HwC2Interface.h"
 
-#include GPU_PUBLIC_INCLUDE
+#include "mali-bifrost/gralloc/src/mali_gralloc_buffer.h"
 
 #define GETTIME(a, b) gettimeofday(a, b);
 #define TIME_DIFF(start, end, diff)                    \
