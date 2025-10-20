@@ -18,7 +18,6 @@
 #include "HardwareRotator.h"
 #include "syncfence.h"
 #include "IHWCPrivateService.h"
-#include "hdr10pInterface.h"
 #include "utils.h"
 
 using android::base::StringPrintf;
@@ -564,7 +563,8 @@ unsigned int Compositor::ionGetMetadataFlag(buffer_handle_t handle)
         flag = ptr->flag;
 
         if (flag & SUNXI_METADATA_FLAG_HDRP_HEADER) {
-            processHdr10p(ptr);
+            //processHdr10p(ptr);
+            return 0;
         }
         /*struct afbc_header *p = &(ptr->afbc_head);
         DLOGD("&&&&& afbc header:");

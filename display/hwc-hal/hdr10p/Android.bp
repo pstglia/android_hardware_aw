@@ -12,21 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-cc_prebuilt_library_static {
+cc_library_static {
     name: "libawhdr10p",
-    vendor: true,
-    enabled: true,
+    srcs: ["stub_awhdr10p.cpp"],
 
-    defaults: [
-    ],
-
-    arch: {
-        arm: {
-            srcs: ["libhdr10p.a"],
-        },
-        arm64: {
-            srcs: ["libhdr10p.a"],
-        },
-    },
+    vendor_available: true,
+    compile_multilib: "both",
+    relative_install_path: "hw",
 }
 
