@@ -3101,7 +3101,7 @@ void V4L2CameraDevice::releasePreviewFrame(int index)
         if (ret != 0)
         {
             LOGE("releasePreviewFrame: VIDIOC_QBUF Failed: index = %d, ret = %d, addr:%x, len:%d, %s",
-                buf.index, ret, (unsigned int)mMapMem.mem[index],buf.length,strerror(errno));
+                buf.index, ret, (unsigned long long)mMapMem.mem[index],buf.length,strerror(errno));
         }
         else
         {

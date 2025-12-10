@@ -53,17 +53,17 @@ LOCAL_SHARED_LIBRARIES := android.hardware.drm@1.0 android.hardware.drm@1.1 andr
 include $(BUILD_PREBUILT)
 
 #64
-include $(CLEAR_VARS)
-LOCAL_MODULE := libwvhidl
-LOCAL_SRC_FILES := lib64/libwvhidl.so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MULTILIB := 64
-LOCAL_PROPRIETARY_MODULE := true
+#include $(CLEAR_VARS)
+#LOCAL_MODULE := libwvhidl
+#LOCAL_SRC_FILES := lib64/libwvhidl.so
+#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE_SUFFIX := .so
+#LOCAL_MULTILIB := 64
+#LOCAL_PROPRIETARY_MODULE := true
 #LOCAL_STRIP_MODULE := true
-LOCAL_CHECK_ELF_FILES := false
-include $(BUILD_PREBUILT)
+#LOCAL_CHECK_ELF_FILES := false
+#include $(BUILD_PREBUILT)
 
 #####################################################################
 #libwvdrmengine.so
@@ -82,18 +82,18 @@ LOCAL_SHARED_LIBRARIES := libbase libc++ libc libcrypto libdl libhidlbase liblog
 include $(BUILD_PREBUILT)
 
 #64
-include $(CLEAR_VARS)
-LOCAL_MODULE := libwvdrmengine
-LOCAL_SRC_FILES := lib64/libwvdrmengine.so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MULTILIB := 64
-LOCAL_MODULE_RELATIVE_PATH := mediadrm
-LOCAL_PROPRIETARY_MODULE := true
+#include $(CLEAR_VARS)
+#LOCAL_MODULE := libwvdrmengine
+#LOCAL_SRC_FILES := lib64/libwvdrmengine.so
+#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE_SUFFIX := .so
+#LOCAL_MULTILIB := 64
+#LOCAL_MODULE_RELATIVE_PATH := mediadrm
+#LOCAL_PROPRIETARY_MODULE := true
 #LOCAL_STRIP_MODULE := true
-LOCAL_CHECK_ELF_FILES := false
-include $(BUILD_PREBUILT)
+#LOCAL_CHECK_ELF_FILES := false
+#include $(BUILD_PREBUILT)
 
 #####################################################################
 #libvtswidevine.so
@@ -112,18 +112,18 @@ LOCAL_SHARED_LIBRARIES := libbase libc++ libc libcrypto libdl libhidlbase liblog
 include $(BUILD_PREBUILT)
 
 #64
-include $(CLEAR_VARS)
-LOCAL_MODULE := libvtswidevine
-LOCAL_SRC_FILES := lib64/libvtswidevine.so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MULTILIB := 64
-LOCAL_MODULE_RELATIVE_PATH := drm-vts-test-libs
-LOCAL_PROPRIETARY_MODULE := true
+#include $(CLEAR_VARS)
+#LOCAL_MODULE := libvtswidevine
+#LOCAL_SRC_FILES := lib64/libvtswidevine.so
+#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE_SUFFIX := .so
+#LOCAL_MULTILIB := 64
+#LOCAL_MODULE_RELATIVE_PATH := drm-vts-test-libs
+#LOCAL_PROPRIETARY_MODULE := true
 #LOCAL_STRIP_MODULE := true
-LOCAL_CHECK_ELF_FILES := false
-include $(BUILD_PREBUILT)
+#LOCAL_CHECK_ELF_FILES := false
+#include $(BUILD_PREBUILT)
 
 #####################################################################
 #liboemcrypto.so

@@ -601,7 +601,7 @@ status_t CallbackNotifier::enableVideoRecording()
     for(int index = 0;index <NB_BUFFER; index++)
     {
         mCam_buff[index] = mGetMemoryCB(-1, sizeof(VideoNativeHandleMetadata), 1, mCallbackCookie);
-        LOGV("mCam_buff[%d]->data = 0x%x !",index,(unsigned int)mCam_buff[index]->data);
+        LOGV("mCam_buff[%lld]->data = 0x%x !",index,(unsigned long long)mCam_buff[index]->data);
     }
     mVideoRecEnabled = true;
     return NO_ERROR;
@@ -616,7 +616,7 @@ void CallbackNotifier::disableVideoRecording()
         for(int index = 0;index <NB_BUFFER; index++)
         {
             mCam_buff[index]->release(mCam_buff[index]);
-            LOGV("mCam_buff[%d]->data = 0x%x !",index,(unsigned int)mCam_buff[index]->data);
+            LOGV("mCam_buff[%d]->data = 0x%x !",index,(unsigned long long)mCam_buff[index]->data);
         }
     }
 }
@@ -1076,13 +1076,13 @@ CONTINUE_COUNT:
             lock_status = pthread_mutex_trylock(&mCountMutex);
             if(lock_status == 0)
             {
-                LOGV("index = %d ,mCam_buff[index]->data = 0x%x,pbuf->refCnt = %d",index,(unsigned int)mCam_buff[index]->data,pbuf->refCnt);
+                LOGV("index = %d ,mCam_buff[index]->data = 0x%x,pbuf->refCnt = %d",index,(unsigned long long)mCam_buff[index]->data,pbuf->refCnt);
                 memcpy(mCam_buff[index]->data, &mVideoNativeMetadata, sizeof(VideoNativeHandleMetadata));
                 LOGV("CallbackNotifier::onNextFrameHW index = %d,mVideoNativeMetadata.pHandle = 0x%x,mCam_buff[%d]->data = 0x%x",
                                   index,
-                                  (unsigned int)mVideoNativeMetadata.pHandle,
+                                  (unsigned long long)mVideoNativeMetadata.pHandle,
                                   index,
-                                  (unsigned int)mCam_buff[index]->data);
+                                  (unsigned long long)mCam_buff[index]->data);
                 mDataCBTimestamp(pbuf->timeStamp, CAMERA_MSG_VIDEO_FRAME,
                                   mCam_buff[index], 0, mCallbackCookie);
 
