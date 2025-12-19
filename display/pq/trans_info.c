@@ -178,7 +178,7 @@ int download_firmware(int fd)
 	id = atoi(t_buff+3);
 	head[19] = '\0';
 	if (id != de_version) {
-		PQ_Printf("de_version not match[%d]-[%d]:%s@%ld.", de_version, id, t_buff, t_buff - head);
+		PQ_Printf("de_version not match[%d]-[%d]:%s@%d.", de_version, id, t_buff, t_buff - head);
 		ret = -1;
 		close(fd);
 		goto err;
