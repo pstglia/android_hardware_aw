@@ -1,6 +1,6 @@
 on property:sys.boot_completed=1
     # snd-aloop device for bluetooth vohci
-    insmod /vendor/lib/modules/snd-aloop.ko id="VoHCILoopback"
+    insmod /vendor/lib/modules_longan/snd-aloop.ko id="VoHCILoopback"
     start vohci
 
 service vohci /vendor/bin/vohci

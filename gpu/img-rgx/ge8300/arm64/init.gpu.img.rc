@@ -1,6 +1,6 @@
 on late-fs
     # gpu
-    insmod /vendor/lib/modules/pvrsrvkm.ko
+    insmod /vendor/lib/modules_longan/pvrsrvkm.ko
 
 service pvrsrvinit /vendor/bin/pvrsrvctl --start
     class core

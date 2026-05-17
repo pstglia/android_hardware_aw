@@ -14,20 +14,20 @@ on boot
     chown bluetooth net_bt_admin ${ro.bt.bdaddr_path}
 
 on property:persist.log.tag.bluetooth_vendor=broadcom
-    insmod /vendor/lib/modules/bcm_btlpm.ko assert_level=1
+    insmod /vendor/lib/modules_longan/bcm_btlpm.ko assert_level=1
     setprop vendor.init.lpm.load 1
 
 on property:persist.log.tag.bluetooth_vendor=realtek
-    insmod /vendor/lib/modules/rtl_btlpm.ko assert_level=1
-    insmod /vendor/lib/modules/rtk_btusb.ko
+    insmod /vendor/lib/modules_longan/rtl_btlpm.ko assert_level=1
+    insmod /vendor/lib/modules_longan/rtk_btusb.ko
     setprop vendor.init.lpm.load 1
 
 on property:persist.log.tag.bluetooth_vendor=xradio
-    insmod /vendor/lib/modules/xradio_btlpm.ko assert_level=3
+    insmod /vendor/lib/modules_longan/xradio_btlpm.ko assert_level=3
     setprop vendor.init.lpm.load 1
 
 on property:persist.log.tag.module_info=xradio:xr819:0x1:0x00202281
-    insmod vendor/lib/modules/wireless_switch.ko
+    insmod vendor/lib/modules_longan/wireless_switch.ko
     chmod 0660 /sys/class/rfkill/rfkill1/state
     chmod 0660 /sys/class/rfkill/rfkill1/type
     chown bluetooth net_bt_admin /sys/class/rfkill/rfkill1/state
@@ -35,14 +35,14 @@ on property:persist.log.tag.module_info=xradio:xr819:0x1:0x00202281
     write /sys/class/rfkill/rfkill1/state 0
 
 on property:persist.log.tag.bluetooth_vendor=sprd
-    insmod /vendor/lib/modules/uwe5622_bsp_sdio.ko
-    insmod /vendor/lib/modules/sprdbt_tty.ko
+    insmod /vendor/lib/modules_longan/uwe5622_bsp_sdio.ko
+    insmod /vendor/lib/modules_longan/sprdbt_tty.ko
     setprop vendor.init.lpm.load 1
 
 on property:persist.log.tag.bluetooth_vendor=aic
-    insmod /vendor/lib/modules/aic8800_bsp.ko
-    insmod /vendor/lib/modules/aic8800_btlpm.ko assert_level=3
-    insmod /vendor/lib/modules/aic8800_btusb.ko
+    insmod /vendor/lib/modules_longan/aic8800_bsp.ko
+    insmod /vendor/lib/modules_longan/aic8800_btlpm.ko assert_level=3
+    insmod /vendor/lib/modules_longan/aic8800_btusb.ko
     setprop vendor.init.lpm.load 1
 
 on property:vendor.driver.lpm.load=1

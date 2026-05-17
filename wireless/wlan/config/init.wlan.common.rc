@@ -1,5 +1,5 @@
 on early-init
-    insmod /vendor/lib/modules/sunxi_rfkill.ko
+    insmod /vendor/lib/modules_longan/sunxi_rfkill.ko
     # rfkill control for wifi
     chmod 0666 /sys/devices/virtual/misc/sunxi-wlan/rf-ctrl/power_state
     chmod 0666 /sys/devices/virtual/misc/sunxi-wlan/rf-ctrl/scan_device
